@@ -1,210 +1,175 @@
+ :root {
+    --color-primary: #F97316; /* Brand Orange */
+    --color-primary-dark: #EA580C; /* Darker Orange */
+    --color-secondary-light: #F5EFFF; /* Light Purple */
+    --color-dark: #1a1a1a;
+    --color-text: #1a1a1a;
+    --color-light-bg: #F8F4F0;
+    --color-white: #ffffff;
+    --color-gray: #6b7280; 
+    --color-light-gray-border: #e5e7eb; 
 
-/* will need to add :root when deciding on colors etc, now it doesnt make sense since its pretty much casual*/
+    --font-display: 'Bebas Neue', cursive;
+    --font-body: 'Roboto', sans-serif;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #fcfaf8; 
-    color: #333;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: var(--font-body);
+    background-color: var(--color-light-bg);
+    color: var(--color-text);
 }
 
-.container {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 1.5rem; 
+.font-display {
+    font-family: var(--font-display);
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif; 
-    color: #8B0000; 
-    text-align: center;
-    margin-bottom: 2.5rem; 
-}
-
-h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 1rem; 
-}
-@media (min-width: 768px) { 
-    h1 {
-        font-size: 5rem; 
-    }
-}
-
-h2 {
-    font-size: 3rem; 
-    font-weight: 700;
-}
-@media (min-width: 768px) {
-    h2 {
-        font-size: 3.5rem;
-    }
-}
-
-h3 {
-    font-size: 2rem; 
-    font-weight: 700;
-}
+/* Reusable Components */
 
 .btn-primary {
-    background-color: #C8102E; 
-    color: white;
-    padding: 0.75rem 1.5rem; 
-    border-radius: 0.5rem; 
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-    font-size: 1.125rem; 
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-display);
+    letter-spacing: 0.05em; /* tracking-wider */
+    padding: 0.5rem 1.5rem; /* py-2 px-6 */
+    border-radius: 0.125rem; /* rounded-sm */
+    transition-property: background-color;
+    transition-duration: 300ms;
 }
+
 .btn-primary:hover {
-    background-color: #A50021; 
+    background-color: var(--color-primary-dark);
 }
 
-.hero-section {
-    position: relative;
-    height: 100vh;
-    background-image: url('https://placehold.co/1920x1080/A0522D/FFFFFF?text=Classic+Italian+Pizzeria');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem; 
-    color: white;
-    text-align: center;
+.btn-outline-white {
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+    font-family: var(--font-display);
+    letter-spacing: 0.05em; /* tracking-wider */
+    padding: 0.75rem 2.5rem; /* py-3 px-10 */
+    border-radius: 0.125rem; /* rounded-sm */
+    transition-property: background-color, color;
+    transition-duration: 300ms;
 }
-.hero-overlay {
+
+.btn-outline-white:hover {
+    background-color: var(--color-white);
+    color: var(--color-text);
+}
+
+.section-heading {
+    font-family: var(--font-display);
+    font-size: 3rem; /* text-5xl */
+    line-height: 1; /* leading-none */
+    text-align: center;
+    margin-bottom: 3rem; /* mb-12 */
+    letter-spacing: 0.05em; /* tracking-wider */
+}
+@media (min-width: 768px) {
+    .section-heading {
+        font-size: 3.75rem; /* md:text-6xl */
+    }
+}
+
+.menu-card {
+    border: 1px solid var(--color-light-gray-border);
+    padding: 2rem; /* p-8 */
+    text-align: center;
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: all 300ms ease-in-out;
+    position: relative;
+}
+
+.menu-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+    transform: translateY(-0.5rem); /* -translate-y-2 */
+}
+
+.menu-card-highlight {
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+    transform: translateY(-0.5rem); /* -translate-y-2 */
+    position: relative;
+    padding: 2rem; /* p-8 */
+    text-align: center;
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: all 300ms ease-in-out;
+}
+
+.menu-card-badge {
+    font-family: var(--font-display);
+    letter-spacing: 0.05em; /* tracking-wider */
+    color: var(--color-white);
+    background-color: var(--color-primary);
     position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    top: -1rem; /* -top-4 */
+    left: 50%;
+    transform: translateX(-50%); /* -translate-x-1/2 */
+    padding: 0.25rem 1rem; /* px-4 py-1 */
+    border-radius: 9999px; /* rounded-full */
 }
-.hero-content {
+
+.card-title {
+    font-family: var(--font-display);
+    font-size: 2.25rem; /* text-4xl */
+    letter-spacing: 0.05em; /* tracking-wider */
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.card-description {
+    color: var(--color-gray);
+    margin-bottom: 1.5rem; /* mb-6 */
+    height: 3rem; /* h-12 to maintain consistent height */
+}
+
+.card-price-main {
+    font-family: var(--font-display);
+    font-size: 3rem; /* text-5xl */
+    letter-spacing: 0.05em; /* tracking-wider */
+    color: var(--color-primary);
+}
+
+.card-price-sub {
+    font-family: var(--font-display);
+    font-size: 1.5rem; /* text-2xl */
+    letter-spacing: 0.05em; /* tracking-wider */
+    color: var(--color-gray);
+    margin-right: 0.5rem; /* mr-2 */
+}
+
+.social-icon {
+    font-size: 1.5rem; /* text-2xl */
+    color: var(--color-gray);
+    transition-property: color;
+    transition-duration: 300ms;
+}
+
+.social-icon:hover {
+    color: var(--color-primary);
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Underline animation for nav links */
+.nav-link {
     position: relative;
-    z-index: 10;
+    text-decoration: none;
 }
-.hero-content p {
-    font-size: 1.25rem; 
-    margin-bottom: 2rem; 
-    font-style: italic;
-    font-weight: 300;
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-primary);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
-@media (min-width: 768px) {
-    .hero-content p {
-        font-size: 1.5rem; 
-    }
-}
-
-
-section {
-    padding: 4rem 0; 
-}
-.bg-white-section {
-    background-color: #ffffff;
-}
-.bg-gray-section {
-    background-color: #f0f0f0; 
-}
-
-/* Menu Section */
-.menu-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem; 
-    max-width: 600px; 
-    margin: 0 auto;
-}
-@media (min-width: 768px) {
-    .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 900px; 
-    }
-}
-
-.menu-item {
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 1rem; 
-}
-.menu-item:last-child {
-    border-bottom: none; 
-}
-@media (min-width: 768px) {
-    .menu-grid > div:nth-last-child(-n+2) { 
-        border-bottom: none;
-    }
-}
-
-.menu-item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 0.5rem; 
-}
-.menu-item-name {
-    font-family: 'Playfair Display', serif;
-    color: #8B0000;
-    font-size: 2rem; 
-    font-weight: 700;
-    line-height: 1.2;
-}
-.menu-item-price {
-    color: #228B22; 
-    font-weight: 700;
-    font-size: 1.5rem; 
-}
-.menu-item-description {
-    color: #555;
-    font-size: 1.125rem;
-}
-
-.menu-footer-text {
-    text-align: center;
-    color: #777;
-    margin-top: 2.5rem;
-    font-size: 1.125rem; 
-}
-
-.contact-info {
-    background-color: #ffffff;
-    padding: 2.5rem; 
-    border-radius: 0.5rem; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: inline-block; 
-    text-align: left;
-    margin: 0 auto; 
-}
-.contact-info p {
-    font-size: 1.125rem; 
-    margin-bottom: 0.5rem; 
-}
-.contact-info strong {
-    font-weight: 700;
-}
-.contact-info ul {
-    list-style: none;
-    padding-top: 1rem;
-}
-.contact-info ul li {
-    margin-bottom: 0.5rem;
-    font-size: 1.125rem;
-    color: #555;
-}
-.contact-info .hours-title {
-    font-weight: 700;
-    color: #C8102E;
-    margin-top: 1rem;
-}
-
-
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 2rem 0; 
-    text-align: center;
-    font-size: 1rem; 
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }

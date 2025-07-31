@@ -4,102 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spicchi Pizza</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
+<body class="antialiased">
 
-    <header id="home" class="hero-section">
-        <div class="hero-overlay"></div>
-        
-        <div class="hero-content">
-            <h1>Spicchi Pizza</h1>
-            <p>Your Favorite Jesolo Pizza</p>
-            <a href="#menu" class="btn-primary">See Our Menu</a>
-        </div>
+    <header class="bg-brand-dark text-black sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-display text-4xl tracking-widest">
+                Spicchi Pizza
+            </a>
+            <div class="hidden md:flex space-x-8 items-center font-display tracking-wider text-xl">
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <a href="#menu" class="hidden md:inline-block btn-primary text-lg">
+                Order Now
+            </a>
+            </nav>
     </header>
 
-    <section id="menu" class="bg-white-section">
-        <div class="container">
-            <h2>Our Menu</h2>
-
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="menu-item-header">
-                        <h3 class="menu-item-name">Margherita</h3>
-                        <span class="menu-item-price">€6.50</span>
-                    </div>
-                    <p class="menu-item-description">Tomato, fresh mozzarella.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-header">
-                        <h3 class="menu-item-name">Diavola</h3>
-                        <span class="menu-item-price">€9.50</span>
-                    </div>
-                    <p class="menu-item-description">Tomato, mozzarella, spicy salami.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-header">
-                        <h3 class="menu-item-name">Quattro Formaggi</h3>
-                        <span class="menu-item-price">€11.50</span>
-                    </div>
-                    <p class="menu-item-description">Mozzarella, gorgonzola, parmesan, provolone.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-header">
-                        <h3 class="menu-item-name">Patatosa</h3>
-                        <span class="menu-item-price">€9.00</span>
-                    </div>
-                    <p class="menu-item-description">Tomato, mozzarella, french fries.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-header">
-                        <h3 class="menu-item-name">Prosciutto e Funghi</h3>
-                        <span class="menu-item-price">€11.00</span>
-                    </div>
-                    <p class="menu-item-description">Tomato, mozzarella, ham, mushrooms.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-header">
-                        <h3 class="menu-item-name">Capricciosa</h3>
-                        <span class="menu-item-price">€11.00</span>
-                    </div>
-                    <p class="menu-item-description">Tomato, mozzarella, ham, mushrooms, artichokes, olives.</p>
-                </div>
-            </div>
-
-            <p class="menu-footer-text">
-                *Some products may have been freezed
-            </p>
-        </div>
-    </section>
-
-    <section id="contact" class="bg-gray-section">
-        <div class="container">
-            <h2>Visit Us</h2>
-            <p style="text-align: center; font-size: 1.25rem; color: #555; margin-bottom: 2rem;">Come and experience a slice of Italy!</p>
+    <main>
+        <section class="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-white text-center px-4">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <video src="images/dough.mp4" 
+                    class="absolute inset-0 w-full h-full object-cover" autoplay muted loop></video>
+                
+                 
             
-            <div class="contact-info">
-                <p><strong>Address:</strong> Via Bafile, 45, 30016 Jesolo(VE), Italy</p>
-                <p><strong>Phone:</strong> +39 0423 123456</p>
-                <p><strong>Email:</strong> ciao@spicchipizza.it</p>
-                <p class="hours-title">Opening Hours:</p>
-                <ul>
-                    <li>Monday - Friday: 11:00 AM - 1:00 AM</li>
-                    <li>Saturday-Sunday: 11:00 AM - 3:00 AM</li>
-                </ul>
+            <div class="relative z-10">
+                <h1 class="font-display text-6xl md:text-8xl lg:text-9xl tracking-wider">ARTISANAL PIZZA</h1>
+                <p class="font-display text-3xl md:text-5xl text-brand-orange tracking-widest mt-2">BY THE SLICE - €3,50</p>
+                <a href="#menu" class="mt-8 inline-block btn-outline-white text-xl">
+                    Explore The Menu
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Spicchi Pizza. All rights reserved.</p>
+        <section id="menu" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-heading">The Lineup</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="menu-card">
+                        <h3 class="card-title">The Slice</h3>
+                        <p class="card-description">The classic, quick, and always satisfying choice.</p>
+                        <div class="card-price-main">
+                            €3,50
+                        </div>
+                    </div>
+
+                    <div class="menu-card-highlight">
+                        <p class="menu-card-badge">Most Popular</p>
+                        <h3 class="card-title">The Standard</h3>
+                        <p class="card-description">12-inch pie. Perfect for two, or one hungry person.</p>
+                        <div class="flex items-end justify-center">
+                            <span class="card-price-sub">From</span>
+                            <span class="card-price-main">€6,50</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <h3 class="card-title">The Big One</h3>
+                        <p class="card-description">18-inch party-sized pizza. Go big or go home.</p>
+                        <div class="flex items-end justify-center">
+                            <span class="card-price-sub">From</span>
+                            <span class="card-price-main">€18</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-20 bg-brand-dark">
+            <div class="container mx-auto px-6">
+                <h2 class="section-heading text-black">The Atmosphere</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="h-80 overflow-hidden rounded-lg"><img src="https://placehold.co/600x800/9333EA/FFFFFF?text=Vibes" onerror="this.onerror=null;this.src='https://placehold.co/600x800/9333EA/FFFFFF?text=Vibes';" alt="Pizzeria interior" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"></div>
+                    <div class="h-80 overflow-hidden rounded-lg"><img src="https://placehold.co/600x800/F97316/FFFFFF?text=Pizza" onerror="this.onerror=null;this.src='https://placehold.co/600x800/F97316/FFFFFF?text=Pizza';" alt="Close up of a pizza" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"></div>
+                    <div class="h-80 overflow-hidden rounded-lg"><img src="https://placehold.co/600x800/1a1a1a/FFFFFF?text=People" onerror="this.onerror=null;this.src='https://placehold.co/600x800/1a1a1a/FFFFFF?text=People';" alt="Friends eating pizza" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"></div>
+                    <div class="h-80 overflow-hidden rounded-lg"><img src="https://placehold.co/600x800/F5EFFF/1a1a1a?text=Drinks" onerror="this.onerror=null;this.src='https://placehold.co/600x800/F5EFFF/1a1a1a?text=Drinks';" alt="Drinks at the pizzeria" class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="bg-white">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <h3 class="font-display text-4xl tracking-wider mb-2">Find Us</h3>
+            <p class="text-lg mb-2">Via Roma 123, 31044 Montebelluna, Italy</p>
+            <p class="text-lg mb-6">Open Daily: 11:00 AM - 2:00 AM</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="text-sm text-gray-400">&copy; 2025 SPICCHI PIZZA. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
 
