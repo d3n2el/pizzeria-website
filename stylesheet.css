@@ -1,0 +1,210 @@
+
+/* will need to add :root when deciding on colors etc, now it doesnt make sense since its pretty much casual*/
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fcfaf8; 
+    color: #333;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1.5rem; 
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; 
+    color: #8B0000; 
+    text-align: center;
+    margin-bottom: 2.5rem; 
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem; 
+}
+@media (min-width: 768px) { 
+    h1 {
+        font-size: 5rem; 
+    }
+}
+
+h2 {
+    font-size: 3rem; 
+    font-weight: 700;
+}
+@media (min-width: 768px) {
+    h2 {
+        font-size: 3.5rem;
+    }
+}
+
+h3 {
+    font-size: 2rem; 
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: #C8102E; 
+    color: white;
+    padding: 0.75rem 1.5rem; 
+    border-radius: 0.5rem; 
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-size: 1.125rem; 
+}
+.btn-primary:hover {
+    background-color: #A50021; 
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://placehold.co/1920x1080/A0522D/FFFFFF?text=Classic+Italian+Pizzeria');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; 
+    color: white;
+    text-align: center;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+.hero-content p {
+    font-size: 1.25rem; 
+    margin-bottom: 2rem; 
+    font-style: italic;
+    font-weight: 300;
+}
+@media (min-width: 768px) {
+    .hero-content p {
+        font-size: 1.5rem; 
+    }
+}
+
+
+section {
+    padding: 4rem 0; 
+}
+.bg-white-section {
+    background-color: #ffffff;
+}
+.bg-gray-section {
+    background-color: #f0f0f0; 
+}
+
+/* Menu Section */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem; 
+    max-width: 600px; 
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px; 
+    }
+}
+
+.menu-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1rem; 
+}
+.menu-item:last-child {
+    border-bottom: none; 
+}
+@media (min-width: 768px) {
+    .menu-grid > div:nth-last-child(-n+2) { 
+        border-bottom: none;
+    }
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 0.5rem; 
+}
+.menu-item-name {
+    font-family: 'Playfair Display', serif;
+    color: #8B0000;
+    font-size: 2rem; 
+    font-weight: 700;
+    line-height: 1.2;
+}
+.menu-item-price {
+    color: #228B22; 
+    font-weight: 700;
+    font-size: 1.5rem; 
+}
+.menu-item-description {
+    color: #555;
+    font-size: 1.125rem;
+}
+
+.menu-footer-text {
+    text-align: center;
+    color: #777;
+    margin-top: 2.5rem;
+    font-size: 1.125rem; 
+}
+
+.contact-info {
+    background-color: #ffffff;
+    padding: 2.5rem; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: inline-block; 
+    text-align: left;
+    margin: 0 auto; 
+}
+.contact-info p {
+    font-size: 1.125rem; 
+    margin-bottom: 0.5rem; 
+}
+.contact-info strong {
+    font-weight: 700;
+}
+.contact-info ul {
+    list-style: none;
+    padding-top: 1rem;
+}
+.contact-info ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    color: #555;
+}
+.contact-info .hours-title {
+    font-weight: 700;
+    color: #C8102E;
+    margin-top: 1rem;
+}
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0; 
+    text-align: center;
+    font-size: 1rem; 
+}
