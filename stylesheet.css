@@ -1,4 +1,4 @@
- :root {
+:root {
     --color-primary: #F97316; /* Brand Orange */
     --color-primary-dark: #EA580C; /* Darker Orange */
     --color-secondary-light: #F5EFFF; /* Light Purple */
@@ -8,7 +8,6 @@
     --color-white: #ffffff;
     --color-gray: #6b7280; 
     --color-light-gray-border: #e5e7eb; 
-
     --font-display: 'Bebas Neue', cursive;
     --font-body: 'Roboto', sans-serif;
 }
@@ -32,8 +31,7 @@ body {
     letter-spacing: 0.05em; /* tracking-wider */
     padding: 0.5rem 1.5rem; /* py-2 px-6 */
     border-radius: 0.125rem; /* rounded-sm */
-    transition-property: background-color;
-    transition-duration: 300ms;
+    transition: background-color 300ms ease;
 }
 
 .btn-primary:hover {
@@ -47,8 +45,7 @@ body {
     letter-spacing: 0.05em; /* tracking-wider */
     padding: 0.75rem 2.5rem; /* py-3 px-10 */
     border-radius: 0.125rem; /* rounded-sm */
-    transition-property: background-color, color;
-    transition-duration: 300ms;
+    transition: background-color 300ms ease, color 300ms ease;
 }
 
 .btn-outline-white:hover {
@@ -77,6 +74,9 @@ body {
     border-radius: 0.5rem; /* rounded-lg */
     transition: all 300ms ease-in-out;
     position: relative;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; /* Push content to top, prices to bottom */
 }
 
 .menu-card:hover {
@@ -93,6 +93,9 @@ body {
     text-align: center;
     border-radius: 0.5rem; /* rounded-lg */
     transition: all 300ms ease-in-out;
+    display: flex; /* Flexbox for internal layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Push content to top, prices to bottom */
 }
 
 .menu-card-badge {
@@ -106,6 +109,7 @@ body {
     transform: translateX(-50%); /* -translate-x-1/2 */
     padding: 0.25rem 1rem; /* px-4 py-1 */
     border-radius: 9999px; /* rounded-full */
+    white-space: nowrap; /* Prevent badge text from wrapping */
 }
 
 .card-title {
@@ -118,9 +122,9 @@ body {
 .card-description {
     color: var(--color-gray);
     margin-bottom: 1.5rem; /* mb-6 */
-    height: 3rem; /* h-12 to maintain consistent height */
+    min-height: 3rem; /* h-12 to maintain consistent height, using min-height now */
 }
-
+/* for index*/
 .card-price-main {
     font-family: var(--font-display);
     font-size: 3rem; /* text-5xl */
@@ -135,12 +139,55 @@ body {
     color: var(--color-gray);
     margin-right: 0.5rem; /* mr-2 */
 }
+/* Container for multiple prices in a card */
+.price-group {
+    margin-top: 1rem; /* Added margin for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+}
+
+/* Style for each individual price line (e.g., "Regular: €10") */
+.price-item {
+    display: flex;
+    align-items: baseline; /* Align text baselines */
+    margin-bottom: 0.5rem; /* Space between price lines */
+}
+
+.price-item:last-child {
+    margin-bottom: 0; /* No margin after the last price item */
+}
+
+.price-label {
+    font-family: var(--font-display);
+    font-size: 1.25rem; /* text-xl */
+    color: var(--color-gray);
+    letter-spacing: 0.05em;
+    margin-right: 0.5rem; /* Spacing between label and price */
+    white-space: nowrap; /* Prevent label from wrapping */
+}
+
+.price-value-main {
+    font-family: var(--font-display);
+    font-size: 2.5rem; /* A good size for individual prices (text-4xl equivalent) */
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+}
+
+/* For single, prominent prices like 'The Slice' or drinks */
+.price-value-single {
+    font-family: var(--font-display);
+    font-size: 3rem; /* text-5xl equivalent */
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    margin-top: 1rem; /* Added margin for spacing */
+}
+
 
 .social-icon {
     font-size: 1.5rem; /* text-2xl */
     color: var(--color-gray);
-    transition-property: color;
-    transition-duration: 300ms;
+    transition: color 300ms ease;
 }
 
 .social-icon:hover {
@@ -156,6 +203,7 @@ html {
 .nav-link {
     position: relative;
     text-decoration: none;
+    color: inherit; /* Ensure link color is inherited from parent */
 }
 .nav-link::after {
     content: '';

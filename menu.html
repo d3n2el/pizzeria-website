@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice Spot - Our Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="stylesheet.css"> 
+    
+</head>
+<body class="antialiased">
+
+    <header class="bg-dark text-black sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="font-display text-4xl tracking-widest">
+                Spicchi Pizza
+            </a>
+            <div class="hidden md:flex space-x-8 items-center font-display tracking-wider text-xl">
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="index.html#gallery" class="nav-link">Gallery</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <a href="menu.html" class="hidden md:inline-block btn-primary text-lg">
+                Order Now
+            </a>
+            </nav>
+    </header>
+
+    <main>
+        <section id="full-menu" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-heading">Our Full Menu</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="col-span-full text-center mb-8">
+                        <h3 class="font-display text-3xl text-primary tracking-wider mb-4">Classic Pizzas</h3>
+                    </div>
+
+                    <div class="menu-card">
+                        <div> <h3 class="card-title">Margherita</h3>
+                            <p class="card-description">Tomato sauce, fresh mozzarella, basil, olive oil.</p>
+                        </div>
+                        <div class="price-group">
+                            <div class="price-item">
+                                <span class="price-label">Regular:</span>
+                                <span class="price-value-main">€6,50</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">XXL:</span>
+                                <span class="price-value-main">€18</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div>
+                            <h3 class="card-title">Patatosa</h3>
+                            <p class="card-description">Tomato sauce, mozzarella, french fries.</p>
+                        </div>
+                        <div class="price-group">
+                            <div class="price-item">
+                                <span class="price-label">Regular:</span>
+                                <span class="price-value-main">€9,50</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">XXL:</span>
+                                <span class="price-value-main">€20</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card-highlight">
+                        <p class="menu-card-badge">Most Popular</p>
+                        <div>
+                            <h3 class="card-title">Four Cheese</h3>
+                            <p class="card-description">Mozzarella, gorgonzola, parmesan, provolone.</p>
+                        </div>
+                        <div class="price-group">
+                            <div class="price-item">
+                                <span class="price-label">Regular:</span>
+                                <span class="price-value-main">€11</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">XXL:</span>
+                                <span class="price-value-main">€21</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-full text-center mt-12 mb-8">
+                        <h3 class="font-display text-3xl text-primary tracking-wider mb-4">Specialty Pizzas</h3>
+                    </div>
+
+                    <div class="menu-card">
+                        <div>
+                            <h3 class="card-title">Prosciutto & Funghi</h3>
+                            <p class="card-description">Tomato sauce, mozzarella, prosciutto, mushrooms.</p>
+                        </div>
+                        <div class="price-group">
+                            <div class="price-item">
+                                <span class="price-label">Regular:</span>
+                                <span class="price-value-main">€10</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">XXL:</span>
+                                <span class="price-value-main">€20</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div>
+                            <h3 class="card-title">Diavola</h3>
+                            <p class="card-description">Spicy salami, mozzarella, tomato sauce.</p>
+                        </div>
+                        <div class="price-group">
+                            <div class="price-item">
+                                <span class="price-label">Regular:</span>
+                                <span class="price-value-main">€9,50</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">XXL:</span>
+                                <span class="price-value-main">€20</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div>
+                            <h3 class="card-title">Vegetariana</h3>
+                            <p class="card-description">Seasonal vegetables, mozzarella, tomato sauce.</p>
+                        </div>
+                        <div class="price-group">
+                            <div class="price-item">
+                                <span class="price-label">Regular:</span>
+                                <span class="price-value-main">€11</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">XXL:</span>
+                                <span class="price-value-main">€21</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-full text-center mt-12 mb-8">
+                        <h3 class="font-display text-3xl text-primary tracking-wider mb-4">Drinks & Sides</h3>
+                    </div>
+
+                    <div class="menu-card">
+                        <div>
+                            <h3 class="card-title">Soft Drinks(Can)</h3>
+                            <p class="card-description">Coca-Cola, Sprite, Fanta, Iced Tea.</p>
+                        </div>
+                        <div class="price-value-single">
+                            €2,50
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div>
+                            <h3 class="card-title">Soft Drinks(Bottle)</h3>
+                            <p class="card-description">Coca-Cola, Sprite, Fanta, Iced Tea</p>
+                        </div>
+                        <div class="price-value-single">
+                            €3,50
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div>
+                            <h3 class="card-title">Beer</h3>
+                            <p class="card-description">Ceres, Corona, Moretti</p>
+                        </div>
+                        <div class="price-value-single">
+                            €4,00-€5,00
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="bg-white">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <h3 class="font-display text-4xl tracking-wider mb-2">Find Us</h3>
+            <p class="text-lg mb-2">Via Roma 123, 31044 Montebelluna, Italy</p>
+            <p class="text-lg mb-6">Open Daily: 12:00 PM - 11:00 PM</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="text-sm text-gray-400">&copy; 2025 SLICE SPOT. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
